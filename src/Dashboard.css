@@ -1,0 +1,24 @@
+.bg {
+  background-image: url("/covid2.png");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width  :100%;
+  align-items: center;
+  
+}
+.flex{
+  display : flex;
+  flex-direction : column;
+  justify-content: space-around;
+  /* flex-basis: content; */
+  /* align-items: center; */
+  justify-content: center;
+  margin-top : 30px;
+  margin-left : 40px;
+  width  : 80%;
+  border: 1px solid rgb(206, 205, 205 );
+  background-color : rgb(206, 205, 205 , 0.6);
+  border-radius: 10px;
+}
