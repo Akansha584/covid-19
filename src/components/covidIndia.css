@@ -1,0 +1,21 @@
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  justify-content: space-evenly;
+}
+
+.button {
+  display: flex;
+  text-align: left;
+  flex-direction: row;
+  margin-left: 10px;
+  flex-basis: content;
+  align-items: center;
+  margin: 20px;
+  /* justify-content : space-evenly */
+}
+
+div > button {
+  margin-right: 10px;
+}
