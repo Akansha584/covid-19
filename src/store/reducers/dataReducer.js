@@ -20,7 +20,6 @@ export const dataReducer = (state = initialState, action) => {
       const { total_cases, active_cases, critical, recovered, deaths, tested} = action.data;
       return {
         ...state,
-        // indiaData,worldData =["india" ,"world"],
         covidData: {
           ...state.covidData,
           total: total_cases,
