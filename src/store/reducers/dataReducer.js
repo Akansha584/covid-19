@@ -17,13 +17,13 @@ export const dataReducer = (state = initialState, action) => {
       };
 
     case "FETCHED_COVID_DATA":
-      const { total_cases, active_cases, critical, recovered, deaths, tested} = action.data;
+      const { total_cases, active_cases , recovered, deaths, tested} = action.data;
       return {
         ...state,
         covidData: {
           ...state.covidData,
           total: total_cases,
-          active: critical,
+          active: active_cases,
           active_w: active_cases,
           recovered: recovered,
           deaths: deaths,

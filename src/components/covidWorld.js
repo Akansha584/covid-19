@@ -37,8 +37,8 @@ class Covid_World extends Component {
               <p align="center">ACROSS GLOBE</p>
               <div> <Alert variant="success"> <p>Total cases : {total}</p></Alert></div>
               <div> <Alert variant="warning"> <p>Active cases : {active_w}</p></Alert></div>
-              <div> <Alert variant="info"> <p>Tested : {tested}</p></Alert></div>
               <div> <Alert variant="primary"> <p>Recovered : {recovered}</p></Alert></div>
+              <div> <Alert variant="info"> <p>Tested : {tested}</p></Alert></div>             
               <div> <Alert variant="danger"> <p>Deaths : {deaths}</p></Alert></div>  
             </div>
           </div>
@@ -84,7 +84,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => ({
   thunk_action_World: () => dispatch(thunk_action_World()),
   thunk_action_Country: () => dispatch(thunk_action_Country()),
-  // thunk_action_World: () => dispatch(thunk_action_World())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Covid_World);

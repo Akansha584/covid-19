@@ -29,7 +29,7 @@ export const thunk_action_World = () => {
       })
       .then(({ data }) => {
         var first_date_values = data[Object.keys(data)[0]];
-        dispatch(receive_post(first_date_values, "world"));
+        dispatch(receive_post(first_date_values));
       })
       .catch((err) => dispatch(receive_error()));
   };
