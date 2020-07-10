@@ -19,7 +19,8 @@ export const receive_error = () => {
   };
 };
 
-export const thunk_action_Country = () => {
+export const thunk_action_Country = (key) => {
+  debugger;
   return function (dispatch, getState) {
     axios
       .get("https://api.quarantine.country/api/v1/summary/latest")
@@ -27,7 +28,12 @@ export const thunk_action_Country = () => {
         return response.data;
       })
       .then(({ data }) => {
-        var updated_values = data[Object.keys(data)[3]];
+        if(key){
+          var updated_values = data.regions[key.name.toLowerCase()];
+        }
+        else{
+          updated_values = data.regions;
+        }     
         dispatch(receive_post(updated_values));
       })
       .catch((err) => dispatch(receive_error()));

@@ -20,6 +20,7 @@ class Covid_World extends Component {
   };
 
   onTargetValue = (key) => {
+    this.props.thunk_action_Country(key); 
     this.setState ({
       show : true,
       target : key
@@ -63,7 +64,7 @@ class Covid_World extends Component {
                   </Dropdown.Menu>
                 </Dropdown>   
 
-                <div>{this.state.show ? <DropValue targetValue = {this.state.target} /> : null}</div>
+                <div>{this.state.show ?<DropValue targetValue = {this.state.target} /> : null}</div>
               </div>
             </div>
           </div>

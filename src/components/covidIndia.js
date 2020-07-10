@@ -29,7 +29,6 @@ class Covid_India extends Component {
 const mapStateToProps = (state) => {
   return {
     covidData: state.dataReducer.covidData,
-    // worldData: state.dataReducer.worldData
   };
 };
 
