@@ -1,42 +1,55 @@
 const initialState = {
-  covidData: {},
-  countryData:{},
+  covidData: [],
+  countryData: [],
   isFetching: false,
-  isError: false,
+  // isError: false,
 };
 
 export const dataReducer = (state = initialState, action) => {
-  
   switch (action.type) {
-    case "FETCH_USER":
+    case "FETCH_LOADING_SPINNER":
       return {
         ...state,
         isFetching: true,
-        userData: {},
-        isError: false,
+        // isError: false,
+      };
+
+    case "FETCHED_COVID_COUNTRY":   
+      var sortCountry=[];    
+      Object.values(action.data).map(key => sortCountry.push(key.name))     
+      return {
+        ...state,
+        countryData: sortCountry.sort(),
+        isFetching: false,
+        // isError: false,
       };
 
     case "FETCHED_COVID_DATA":
-      const { total_cases, active_cases , recovered, deaths, tested} = action.data;
+      const {
+        total_cases,
+        active_cases,
+        recovered,
+        deaths,
+        tested,
+      } = action.data;
       return {
         ...state,
         covidData: {
           ...state.covidData,
-          total: total_cases,
-          active: active_cases,
-          active_w: active_cases,
+          total_cases: total_cases,
+          active_cases: active_cases,
           recovered: recovered,
           deaths: deaths,
           tested: tested,
         },
         isFetching: false,
-        isError: false,
+        // isError: false,
       };
-      
+
     case "RECEIVE_ERROR":
       return {
         ...state,
-        isError: true,
+        // isError: true,
         isFetching: false,
       };
 
