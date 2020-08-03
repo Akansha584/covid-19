@@ -1,0 +1,29 @@
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin-left: 20px;
+  justify-content: space-evenly;
+}
+
+.button {
+  display: flex;
+  text-align: left;
+  flex-direction: row;
+  margin-left: 10px;
+  flex-basis: content;
+  align-items: center;
+  margin: 20px;
+}
+
+div > button {
+  margin-right: 10px;
+}
+
+.graphHeading {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 20px;
+}
