@@ -8,7 +8,7 @@ export const fetch_post = () => {
 
 export const receive_post = (post) => {
   return {
-    type: "FETCHED_COVID_DATA",
+    type: "FETCHED_GRAPH_DATA",
     data: post,
   };
 };
@@ -19,17 +19,16 @@ export const receive_error = () => {
   };
 };
 
-export const thunk_action_India = () => {
+export const thunk_action_graphData = () => {
   return function (dispatch, getState) {
     dispatch(fetch_post());
     axios
-      .get("https://api.quarantine.country/api/v1/summary/latest")
+      .get("https://api.quarantine.country/api/v1/spots/region?region=india")
       .then((response) => {
         return response.data;
       })
-      .then(({ data }) => {
-        var first_date_values = data.regions.india;
-        dispatch(receive_post(first_date_values));
+      .then((data) => {
+        dispatch(receive_post(data.data));
       })
       .catch(() => dispatch(fetch_post()));
   };

@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import Head from "./components/head";
+import Head from "./components/Head";
 import ButtonBar from "./components/buttonBar";
 import classes from "./Dashboard.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter } from "react-router-dom";
 
 class Dashboard extends Component {
   render() {
@@ -12,9 +11,7 @@ class Dashboard extends Component {
         <Head />
         <div className={classes.flex}>
           <div>
-            <BrowserRouter>
-              <ButtonBar />
-            </BrowserRouter>
+            <ButtonBar />
           </div>
         </div>
       </div>

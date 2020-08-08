@@ -27,8 +27,8 @@ export const receive_error = () => {
 };
 
 export const thunk_action_Country = (key) => {
-  return function (dispatch, getState) {   
-    dispatch(fetch_post());  
+  return function (dispatch, getState) {
+    dispatch(fetch_post());
     axios
       .get("https://api.quarantine.country/api/v1/summary/latest")
       .then((response) => {
@@ -43,6 +43,6 @@ export const thunk_action_Country = (key) => {
           dispatch(receive_country_name(updated_values));
         }
       })
-      .catch((err) => dispatch(fetch_post()))
+      .catch((err) => dispatch(fetch_post()));
   };
 };
