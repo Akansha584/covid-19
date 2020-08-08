@@ -5,7 +5,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import ReduxPromise from "redux-promise";
 
 const rootReducer = combineReducers({
-  dataReducer
+  dataReducer,
 });
 const store = createStore(
   rootReducer,

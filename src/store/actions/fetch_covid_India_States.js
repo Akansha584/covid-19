@@ -41,6 +41,7 @@ export const thunk_action_indiaState = (key) => {
             if (key === selectedState_data.state) {
               return (stateData = selectedState_data);
             }
+            return null;
           });
           dispatch(receive_indiaState_Data(stateData));
         } else {

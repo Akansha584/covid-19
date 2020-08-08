@@ -100,7 +100,7 @@ class CovidIndia extends Component {
             <Alert variant="danger">Deaths : {deaths}</Alert>
             {this.props.indiaGraph ? (
               <div>
-                <p className={classes.graphHeading}>Last week status</p>
+                <p className={classes.graphHeading}>Last week status (India)</p>
                 <IndiaCasesGraph
                   indiaGraph_dates={this.props.indiaGraph_dates}
                   indiaGraph_cases={this.props.indiaGraph_cases}

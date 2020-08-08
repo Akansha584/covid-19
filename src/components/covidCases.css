@@ -27,3 +27,7 @@ div > button {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-top: 20px;
 }
+
+.graphBox {
+  box-sizing: border-box;
+}
